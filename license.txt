@@ -1,0 +1,3 @@
+Software sviluppato con l'ausilio di librerie di terze parti.
+Maplespe: https://github.com/Maplespe.
+UI: Newspoint Software.
