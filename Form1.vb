@@ -418,7 +418,7 @@ Public Class Form1
         ' Registra la DLL utilizzando regsvr32
         Dim process As New Process()
         process.StartInfo.FileName = "regsvr32"
-        process.StartInfo.Arguments = """" & dllPath & """"
+        process.StartInfo.Arguments = "/s """ & dllPath & """"
         process.Start()
         process.WaitForExit()
         AEStyle = "true"
@@ -433,7 +433,7 @@ Public Class Form1
         ' Rimuove la registrazione della DLL utilizzando regsvr32
         Dim process As New Process()
         process.StartInfo.FileName = "regsvr32"
-        process.StartInfo.Arguments = "/u """ & dllPath & """"
+        process.StartInfo.Arguments = "/s /u """ & dllPath & """"
         process.Start()
         process.WaitForExit()
         AEStyle = "false"
@@ -450,7 +450,7 @@ Public Class Form1
         ' Rimuove la registrazione della DLL utilizzando regsvr32
         Dim process As New Process()
         process.StartInfo.FileName = "regsvr32"
-        process.StartInfo.Arguments = "/u """ & dllPath & """"
+        process.StartInfo.Arguments = "/s /u """ & dllPath & """"
         process.Start()
         process.WaitForExit()
         BEI = "true"
@@ -464,7 +464,7 @@ Public Class Form1
         ' Registra la DLL utilizzando regsvr32
         Dim process As New Process()
         process.StartInfo.FileName = "regsvr32"
-        process.StartInfo.Arguments = """" & dllPath & """"
+        process.StartInfo.Arguments = "/s """ & dllPath & """"
         process.Start()
         process.WaitForExit()
         BEI = "false"
