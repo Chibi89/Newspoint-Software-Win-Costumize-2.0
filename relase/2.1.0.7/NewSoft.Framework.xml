@@ -37,16 +37,66 @@ NewSoft.Framework
  indice per disattivare l'effetto.
  </summary>
 </member>
-<member name="F:NewSoft.Framework.CwebBrowser._tabControl">
+<member name="T:NewSoft.Framework.PublicFunctions">
  <summary>
- Modulo WebBrowser Personalizzato con TabSystem
+ indice per poter ottenere varie funzioni che facilitano lo sviluppo nell'ide.
  </summary>
 </member>
-<member name="M:NewSoft.Framework.CwebBrowser.NavUrl(System.String)">
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormTitle(System.Windows.Forms.Form,System.String)">
  <summary>
- Esegue la navigazione all'url specificato
- Exsample: 
- cwebBroser.NavUrl("https://www.google.com")
+ indice per poter settare il nome del form.
+ <example>
+ <code>
+ FormTitle(myForm, "Il mio form")
+ </code>
+ </example>
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormSize(System.Windows.Forms.Form,System.Int32,System.Int32)">
+ <summary>
+ indice per poter settare le dimensioni del form.
+ FormSize(myForm, 800, 600)
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormTransparencyKey(System.Windows.Forms.Form,System.Drawing.Color)">
+ <summary>
+ indice per poter settare il trasparancykey color.
+ FormTransparencyKey(myForm, Color.White)
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormStartPositions(System.Windows.Forms.Form,System.String)">
+ <summary>
+ indice per poter settare lo start position.
+ FormStartPositions(myForm, "manual/centerscreen/centerparent")
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormVisibleTopControl(System.Windows.Forms.Form,System.Boolean,System.Boolean)">
+ <summary>
+ indice per poter settare il maximizebox e il minimizebox del form.
+ FormVisibleTopControl(myForm, True/False, True/False)
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormBorderStyle(System.Windows.Forms.Form,System.Windows.Forms.FormBorderStyle)">
+ <summary>
+ indice per poter settare la tipologia del bordo del form.
+ FormBorderStyle(myForm, FormBorderStyle.FixedSingle)
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.PublicFunctions.WinFormFunctionStyle.FormBrgImage(System.Windows.Forms.Form,System.String,System.Windows.Forms.ImageLayout)">
+ <summary>
+ indice per poter l'immagine di sfondo e il relativo layout.
+ FormBrgImage(myForm, "path/to/image.jpg", ImageLayout.Stretch)
+ </summary>
+</member>
+<member name="T:NewSoft.Framework.MathFunc.MathOperation">
+ <summary>
+ Classe per uso matematico
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.MathFunc.MathOperation.PerformOperation(System.String)">
+ <summary>
+ Basical six operation (+ , - , * , / , % , √)
+ Sample :: PerformOperation(textbox1.text).tostring()
  </summary>
 </member>
 <member name="T:NewSoft.Framework.MicaLibrary.LoadMicaSet">
@@ -158,88 +208,6 @@ NewSoft.Framework
  indice per poter ottenere varie informazioni dal sistema in uso.
  </summary>
 </member>
-<member name="T:NewSoft.Framework.SW.BiosInfo">
- <summary>
- indice per poter ottenere varie informazioni sul Bios.
- </summary>
-</member>
-<member name="F:NewSoft.Framework.SW.BiosInfo.subkeyBiosPath">
- <summary>
- Ottiene il nome del prodotto della scheda madre dal registro di sistema.
- </summary>
-</member>
-<member name="M:NewSoft.Framework.SW.BiosInfo.BoardProduct">
- <summary>
- Ottiene il nome del prodotto della scheda madre dal registro di sistema.
- </summary>
- <returns>Restituisce il nome del prodotto della scheda madre o "n/a" se non disponibile.</returns>
-</member>
-<member name="M:NewSoft.Framework.SW.BiosInfo.BiosVersion">
- <summary>
- Ottiene il nome della versione del Bios in uso.
- </summary>
- <returns>Restituisce il nome della versione del bios o "n/a" se non disponibile.</returns>
-</member>
-<member name="M:NewSoft.Framework.SW.BiosInfo.BiosVendor">
- <summary>
- Ottiene il nome del produttore del bios.
- </summary>
- <returns>Restituisce il nome del produttore del bios o "n/a" se non disponibile.</returns>
-</member>
-<member name="T:NewSoft.Framework.SW.infoHW">
- <summary>
- indice per poter ottenere varie informazioni sull'Hardware del sistema in uso.
- </summary>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetCpuArchitecture">
- <summary>
- Restituisce una stringa che rappresenta l'architettura della CPU.
- </summary>
- <returns>Una stringa che rappresenta l'architettura della CPU.</returns>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetCpuInfo(System.Windows.Forms.Label)">
- <summary>
- Ottiene informazioni sulla CPU dal registro di sistema.
- Sample: GetCpuInfo(nomelabel)
- </summary>
- <param name="Cpu">Il controllo Label in cui verranno visualizzate le informazioni sulla CPU.</param>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetGraphicsCardName">
- <summary>
- Ottiene il nome della scheda grafica.
- </summary>
- <returns>Restituisce il nome della scheda grafica o "n/a" se non disponibile.</returns>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetHardDiskInfo(System.IO.DriveInfo,System.String,System.Windows.Forms.Label,System.Windows.Forms.Label)">
- <summary>
- Ottiene il nome del produttore del bios.
- </summary>
- <returns>Sample:
- Dim drive As DriveInfo = New DriveInfo("C")
- Dim driveLetter As String = "C"
- Dim labelControl As Label = C_Label ' Assumi che C_Label sia il nome del tuo controllo Label
- Dim spaceControl As Label = C_Space ' Assumi che C_Space sia il nome del tuo controllo Label
- Dim hardDiskInfo As String = GetHardDiskInfo(drive, driveLetter, labelControl, spaceControl)
- </returns>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetHardDiskModel">
- <summary>
- Ottiene il nome del modello dell'hdd/ssd.
- </summary>
- <returns>Sample:
- UpdateProgressBar("C"c, ProgressBar_C, LabelCState)
- </returns>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetTotalRAM">
- <summary>
- Ottiene il totale della ram espresso in GB.
- </summary>
-</member>
-<member name="M:NewSoft.Framework.SW.infoHW.GetUsedRAM">
- <summary>
- Ottiene la ram in uso espresso in GB.
- </summary>
-</member>
 <member name="T:NewSoft.Framework.SW.infoSF">
  <summary>
  indice per poter ottenere varie informazioni dal sistema in uso.
@@ -288,6 +256,101 @@ NewSoft.Framework
  <returns>Sample:
  UpdateProgressBar("C"c, ProgressBar_C, LabelCState)
  </returns>
+</member>
+<member name="T:NewSoft.Framework.BiosInfo.BiosInfo">
+ <summary>
+ indice per poter ottenere varie informazioni sul Bios.
+ </summary>
+</member>
+<member name="F:NewSoft.Framework.BiosInfo.BiosInfo.subkeyBiosPath">
+ <summary>
+ Ottiene il nome del prodotto della scheda madre dal registro di sistema.
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.BiosInfo.BiosInfo.BoardProduct">
+ <summary>
+ Ottiene il nome del prodotto della scheda madre dal registro di sistema.
+ </summary>
+ <returns>Restituisce il nome del prodotto della scheda madre o "n/a" se non disponibile.</returns>
+</member>
+<member name="M:NewSoft.Framework.BiosInfo.BiosInfo.BiosVersion">
+ <summary>
+ Ottiene il nome della versione del Bios in uso.
+ </summary>
+ <returns>Restituisce il nome della versione del bios o "n/a" se non disponibile.</returns>
+</member>
+<member name="M:NewSoft.Framework.BiosInfo.BiosInfo.BiosVendor">
+ <summary>
+ Ottiene il nome del produttore del bios.
+ </summary>
+ <returns>Restituisce il nome del produttore del bios o "n/a" se non disponibile.</returns>
+</member>
+<member name="T:NewSoft.Framework.HWInfo.infoHW">
+ <summary>
+ indice per poter ottenere varie informazioni sull'Hardware del sistema in uso.
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetBatteryInfo(System.String,System.Drawing.Image,System.Drawing.Image,System.Drawing.Image,System.Drawing.Image)">
+ <summary>
+ indice per ottenere info sullo stato della batteria in uso
+ Sample: GetBatteryInfo(customBatteryStatusText, customImage100, customImage70, customImage30, customImage20) or
+ sample: GetBatteryInfo()
+ </summary>
+ <param name="customBatteryStatusText"></param>
+ <param name="customImage100"></param>
+ <param name="customImage70"></param>
+ <param name="customImage30"></param>
+ <param name="customImage20"></param>
+ <returns></returns>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetCpuArchitecture">
+ <summary>
+ Restituisce una stringa che rappresenta l'architettura della CPU.
+ </summary>
+ <returns>Una stringa che rappresenta l'architettura della CPU.</returns>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetCpuInfo(System.Windows.Forms.Label)">
+ <summary>
+ Ottiene informazioni sulla CPU dal registro di sistema.
+ Sample: GetCpuInfo(nomelabel)
+ </summary>
+ <param name="Cpu">Il controllo Label in cui verranno visualizzate le informazioni sulla CPU.</param>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetGraphicsCardName">
+ <summary>
+ Ottiene il nome della scheda grafica.
+ </summary>
+ <returns>Restituisce il nome della scheda grafica o "n/a" se non disponibile.</returns>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetHardDiskInfo(System.IO.DriveInfo,System.String,System.Windows.Forms.Label,System.Windows.Forms.Label)">
+ <summary>
+ Ottiene il nome del produttore del bios.
+ </summary>
+ <returns>Sample:
+ Dim drive As DriveInfo = New DriveInfo("C")
+ Dim driveLetter As String = "C"
+ Dim labelControl As Label = C_Label ' Assumi che C_Label sia il nome del tuo controllo Label
+ Dim spaceControl As Label = C_Space ' Assumi che C_Space sia il nome del tuo controllo Label
+ Dim hardDiskInfo As String = GetHardDiskInfo(drive, driveLetter, labelControl, spaceControl)
+ </returns>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetHardDiskModel">
+ <summary>
+ Ottiene il nome del modello dell'hdd/ssd.
+ </summary>
+ <returns>Sample:
+ UpdateProgressBar("C"c, ProgressBar_C, LabelCState)
+ </returns>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetTotalRAM">
+ <summary>
+ Ottiene il totale della ram espresso in GB.
+ </summary>
+</member>
+<member name="M:NewSoft.Framework.HWInfo.infoHW.GetUsedRAM">
+ <summary>
+ Ottiene la ram in uso espresso in GB.
+ </summary>
 </member>
 </members>
 </doc>
